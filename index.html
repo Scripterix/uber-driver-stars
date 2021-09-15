@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/materialize.css">
+  <link rel="stylesheet" href="./css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <title>Uber Stars Check & Predict</title>
+  <style>
+    .b {
+      font-weight: 500;
+    }
+
+    .mt-3 {
+      margin-top: 2rem;
+    }
+
+    .mx-3 {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .score {
+      font-weight: bolder;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="indigo darken-1" id="top">
+    <div class="nav-wrapper">
+      <a href="./index.html" class="brand-logo center"> Uber Stars Check & Predict</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./help.html">Help</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <div class="card darken-1">
+          <div class="card-content">
+            <span class="card-title">Check your rating score</span>
+            <p>The ride volume depends of your score. The closest driver receives order has been modify for
+              <span class="dark-text b ">close &
+                higher rating</span> one. Check your score and try to give better service. Gain better score and earn
+              more money in the same time.
+            </p>
+          </div>
+          <div class="card-action">
+            <a href="./about.html" class="blue-text">About ...</a>
+            <a href="./help.html" class="blue-text">Why score is important ? ...</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Your Stars Score</span>
+            <h5 class="score mx-3 blue-text"> ...
+              <span class='material-icons orange-text' id="starsNumber"></span>
+            </h5>
+
+            <p>Now you may check when score will be higher. Add and Removed the stars number with the input fileds
+              above.</p>
+
+            <span class="card-title mx-3">MAX results is 5 star * 500 equal to <strong>2500 :</strong></span>
+            <h5><span class="score blue-text" id="total"> ... </span></h5>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Input Stars from
+              Apps</span>
+            <p>Go to Driver Apps check profilie than score and input every 5 stars score 4 stars etc. Tab, next input
+              field.</p>
+            <div class="row">
+
+              <form id="star-form">
+                <div class="row col s12">
+
+                  <div class="col s6">
+                    <span class="material-icons mt-3 orange-text">star star star star star</span>
+                  </div>
+
+                  <div class="input-field col s6">
+                    <input class="validate" placeholder="How many 5 stars ..." type="number" name="number-five"
+                      id="number-five">
+                    <label for="number">Input Five Stars</label>
+                  </div>
+
+
+
+                  <div class="col s6">
+                    <span class="material-icons mt-3 orange-text">star star star star</span>
+                  </div>
+
+                  <div class="input-field col s6">
+                    <input class="validate" placeholder="How many 4 stars ..." type="number" name="number-four"
+                      class="val" id="number-four">
+                    <label for="number">Input Four Stars</label>
+                  </div>
+
+
+
+                  <div class="col s6">
+                    <span class="material-icons mt-3 orange-text">star star star</span>
+                  </div>
+
+                  <div class="input-field col s6">
+                    <input placeholder="How many 3 stars ..." type="number" name="number-three" class="validate"
+                      id="number-three">
+                    <label for="number">Input Three Stars</label>
+                  </div>
+
+
+
+                  <div class="col s6">
+                    <span class="material-icons mt-3 orange-text">star star</span>
+                  </div>
+
+                  <div class="input-field col s6">
+                    <input placeholder="How many 2 stars ..." type="number" name="number-two" class="val"
+                      id="number-two">
+                    <label for="number">Input Two Stars</label>
+                  </div>
+
+
+
+                  <div class="col s6">
+                    <span class="material-icons mt-3 orange-text">star</span>
+                  </div>
+
+                  <div class="input-field col s6">
+                    <input placeholder="How many 1 stars ..." type="number" name="number-one" class="val"
+                      id="number-one">
+                    <label for="number">Input One Stars</label>
+                  </div>
+
+
+                  <div class="col s6 m6 l6">
+                    <input type="submit" value="Count present score" class="btn waves-effect waves-light mx-3">
+                  </div>
+                  <div class="col s6 m6 l6">
+                    <a href="index.html"> <span class="material-icons mt-3 orange-text">refresh</span></a>
+                  </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="page-footer indigo darken-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Uber Stars Apps</h5>
+          <p class="grey-text text-lighten-4">Check your rating stars in Uber Driver App and finf fields for
+            improovement</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Conatct Developer</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="https://opengateweb.com">Opengateweb</a></li>
+            <li><a class="grey-text text-lighten-3" href="./about.html">About</a></li>
+            <li><a class="grey-text text-lighten-3" href="./help.html">Help</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2020 Copyright <a href="https://opengateweb.com" title="OGW">Opengateweb</a> Piotr Adamkowski
+        <a class="grey-text text-lighten-4 right" href="#top">Back Top</a>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+  <script src="./js/app.js"></script>
+  <script src="./js/materialize.js"></script>
+  <script src="./js/materialize.min.js"></script>
+</body>
+
+</html>
